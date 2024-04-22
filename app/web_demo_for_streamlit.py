@@ -18,14 +18,10 @@ import torch
 from torch import nn
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
-
 from transformers import AutoTokenizer, AutoModelForCausalLM  # isort: skip
-from openxlab.model import download
 
 logger = logging.get_logger(__name__)
-
-download(model_repo='../merged', 
-        output='model')
+model_path="./merged"
 
 @dataclass
 class GenerationConfig:
@@ -161,11 +157,11 @@ def on_btn_click():
 @st.cache_resource
 def load_model():
     model = (
-        AutoModelForCausalLM.from_pretrained("model", trust_remote_code=True)
+        AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True)
         .to(torch.bfloat16)
         .cuda()
     )
-    tokenizer = AutoTokenizer.from_pretrained("model", trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
     return model, tokenizer
 
 
@@ -211,10 +207,10 @@ def main():
     model, tokenizer = load_model()
     print("load model end.")
 
-    user_avator = "../assets/user.png"
-    robot_avator = "../assets/robot.jpeg"
+    user_avator = "assets/user.jpeg"
+    robot_avator = "assets/robot.jpeg"
 
-    st.title("我是钢蛋儿")
+    st.title("我叫钢蛋儿，来自蒙塔基")
 
     generation_config = prepare_generation_config()
 

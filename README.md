@@ -68,7 +68,8 @@ pip install accelerate==0.24.1
 - 微调命令：xtuner train internlm_chat_7b_qlora_self.py --deepspeed deepspeed_zero2,
 详见[xtuner命令](./doc/xtuner.md)
 
-### 部署指南
+
+## 部署指南
 - 第一种方式，python app/app.py
 - 第二种方式，xtuner chat ./merged  --prompt-template internlm_chat
 

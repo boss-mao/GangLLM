@@ -5,11 +5,15 @@
 - 欢迎大家star~⭐⭐
 
 ## 效果演示
-B站视频：https://www.bilibili.com/video/BV1xx421m7nL/
 
-## 在线体验
-- 体验地址：筹备中，敬请期待
-- 模型文件：https://openxlab.org.cn/models/detail/cat_boss/GangLLM
+<p align="center">
+对话效果
+<img src="./doc/asset/chat_demo.png " alt="示例图片的标题">
+</p>
+
+- B站效果视频：https://www.bilibili.com/video/BV1xx421m7nL/
+##  模型文件
+https://openxlab.org.cn/models/detail/cat_boss/GangLLM
 
 ## 更多资讯
 - 请扫码关注微信公众号或者微信搜索“科技猫老板”，了解更多大模型相关技术。
@@ -67,7 +71,7 @@ pip install accelerate==0.24.1
 详见[xtuner命令](./doc/xtuner.md)
 
 ### 部署指南
-- 第一种方式，python cli_demo.py
+- 第一种方式，python app/app.py
 - 第二种方式，xtuner chat ./merged  --prompt-template internlm_chat
 
 

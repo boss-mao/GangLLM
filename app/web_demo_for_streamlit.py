@@ -24,7 +24,7 @@ from openxlab.model import download
 
 logger = logging.get_logger(__name__)
 
-download(model_repo='./merged', 
+download(model_repo='../merged', 
         output='model')
 
 @dataclass
@@ -211,8 +211,8 @@ def main():
     model, tokenizer = load_model()
     print("load model end.")
 
-    user_avator = "assets/user.png"
-    robot_avator = "assets/robot.jpeg"
+    user_avator = "../assets/user.png"
+    robot_avator = "../assets/robot.jpeg"
 
     st.title("我是钢蛋儿")
 

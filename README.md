@@ -9,7 +9,7 @@
 <img src="./doc/asset/chat_demo.png " alt="示例图片的标题">
 </p>
 
-- B站效果视频：https://www.bilibili.com/video/BV1xx421m7nL/
+- B站效果视频：https://www.bilibili.com/video/BV1Xi42127aV/
 ##  模型文件
 https://openxlab.org.cn/models/detail/cat_boss/GangLLM
 

@@ -5,9 +5,7 @@
 - 欢迎大家star~⭐⭐
 
 ## 效果演示
-
 <p align="center">
-对话效果
 <img src="./doc/asset/chat_demo.png " alt="示例图片的标题">
 </p>
 

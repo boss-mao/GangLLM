@@ -17,8 +17,12 @@ from torch import nn
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM 
+from openxlab.model import download
 logger = logging.get_logger(__name__)
 
+
+download(model_repo='cat_boss/GangLLM', 
+        output='model')
 
 @dataclass
 class GenerationConfig:
@@ -152,11 +156,11 @@ def on_btn_click():
 @st.cache_resource
 def load_model():
     model = (
-        AutoModelForCausalLM.from_pretrained("/root/ft-contrarian/merged", trust_remote_code=True)
+        AutoModelForCausalLM.from_pretrained("model", trust_remote_code=True)
         .to(torch.bfloat16)
         .cuda()
     )
-    tokenizer = AutoTokenizer.from_pretrained("/root/ft-contrarian/merged", trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained("model", trust_remote_code=True)
     return model, tokenizer
 
 

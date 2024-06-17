@@ -17,15 +17,9 @@ from torch import nn
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM 
+from modelscope import snapshot_download
 
-import os
-from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModel
-logger = logging.get_logger(__name__)
-model_path = './model'
-os.system('apt install git')
-os.system('apt install git-lfs')
-os.system(f'git clone https://code.openxlab.org.cn/cat_boss/GangLLM.git {model_path}')
-os.system(f'cd {model_path} && git lfs pull')
+model_name_or_path = snapshot_download('maomoa/GangLLM')
 
 @dataclass
 class GenerationConfig:

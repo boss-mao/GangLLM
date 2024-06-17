@@ -26,7 +26,7 @@ if model_repository =='modelscope':
     from modelscope import snapshot_download
     model_name_or_path = snapshot_download('maomoa/GangLLM')
 else:
-    model_name_or_path = './GangLLM'
+    model_name_or_path = './model'
     os.system('apt install git')
     os.system('apt install git-lfs')
     os.system(f'git clone https://code.openxlab.org.cn/cat_boss/GangLLM.git {model_name_or_path}')

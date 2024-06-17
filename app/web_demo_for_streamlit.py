@@ -20,8 +20,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import os
 
 
-model_repertory = os.getenv('MODEL_REPOSITORY', default='modelscope')
-if model_repertory =='modelscope':
+model_repository = os.getenv('MODEL_REPOSITORY', default='modelscope')
+if model_repository =='modelscope':
     from modelscope import snapshot_download
     model_name_or_path = snapshot_download('maomoa/GangLLM')
 else:

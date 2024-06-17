@@ -4,27 +4,22 @@
 - **特别注意，心脏不好或者有心理疾病者慎用，因使用本模型后产生的心理或生理问题，本人概不负责。**
 - 欢迎大家star~⭐⭐
 
-## 效果演示
+## B站视频
+- https://www.bilibili.com/video/BV1Xi42127aV/
+
+## 效果图
 <p align="center">
 <img src="./doc/asset/chat_demo.png " alt="示例图片的标题">
 </p>
 
-- B站效果视频：https://www.bilibili.com/video/BV1Xi42127aV/
 ##  模型文件
-https://openxlab.org.cn/models/detail/cat_boss/GangLLM
+- openxlab: https://openxlab.org.cn/models/detail/cat_boss/GangLLM
+- modelscope: https://modelscope.cn/models/maomoa/GangLLM/files
 
-## 更多资讯
-- 请扫码关注微信公众号或者微信搜索“科技猫老板”，了解更多大模型相关技术。
-
-<p align="center">
-<img src="./doc/asset/qrcode.jpg " alt="示例图片的标题">
-</p>
 
 ## 版权说明
 本项目代码和模型文件均采用木兰宽松许可，你可以无需取得授权，自由的在此项目基础上进行修改，以及进行任何商业化的操作。
 
-## 特别鸣谢
-- [上海人工智能实验室](https://www.shlab.org.cn/)
 
 ---
 ## 微调指南
@@ -73,4 +68,12 @@ pip install accelerate==0.24.1
 - 第一种方式，python app/app.py
 - 第二种方式，xtuner chat ./merged  --prompt-template internlm_chat
 
+## 特别鸣谢
+- [上海人工智能实验室](https://www.shlab.org.cn/)
 
+## 更多资讯
+- 请扫码关注微信公众号或者微信搜索“科技猫老板”，了解更多大模型相关技术。
+
+<p align="center">
+<img src="./doc/asset/qrcode.jpg " alt="示例图片的标题">
+</p>

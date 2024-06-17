@@ -20,6 +20,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import os
 
 
+
 model_repository = os.getenv('MODEL_REPOSITORY', default='modelscope')
 if model_repository =='modelscope':
     from modelscope import snapshot_download

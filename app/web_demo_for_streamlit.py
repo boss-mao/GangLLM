@@ -17,9 +17,25 @@ from torch import nn
 from transformers.generation.utils import LogitsProcessorList, StoppingCriteriaList
 from transformers.utils import logging
 from transformers import AutoTokenizer, AutoModelForCausalLM 
-from modelscope import snapshot_download
 
-model_name_or_path = snapshot_download('maomoa/GangLLM')
+import argparse
+
+parser = argparse.ArgumentParser(description="Load model from specified path.")
+parser.add_argument("--model_repertory", type=str, default="modelscope", help="mode repertory,openxlab or modelscope")
+args = parser.parse_args()
+
+if args.model_repertory=='modelscope':
+    from modelscope import snapshot_download
+    model_name_or_path = snapshot_download('maomoa/GangLLM')
+else:
+    import os
+    model_name_or_path = './GangLLM'
+    # download repo to the base_path directory using git
+    os.system('apt install git')
+    os.system('apt install git-lfs')
+    os.system(f'git clone https://code.openxlab.org.cn/cat_boss/GangLLM.git {model_name_or_path}')
+    os.system(f'cd {model_name_or_path} && git lfs pull')
+
 
 @dataclass
 class GenerationConfig:

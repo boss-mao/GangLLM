@@ -211,8 +211,8 @@ def main():
     model, tokenizer = load_model()
     print("load model end.")
 
-    user_avator = "../assets/user.jpeg"
-    robot_avator = "../assets/robot.jpeg"
+    user_avator = "assets/user.jpeg"
+    robot_avator = "assets/robot.jpeg"
 
     st.title("我叫钢蛋儿，来自蒙塔基")
 
